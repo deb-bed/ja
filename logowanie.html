@@ -334,31 +334,31 @@
             <div class="Login_bioLogin">
                 <p class="tekst_biometeria">Logowanie biometrią</p>
             </div>
-            <div class="Login_passwordSection">
-                <p class="Login_passwordLabel">Hasło</p>
-                <div class="Login_passwordContainer">
-                    <input type="password" placeholder="Wpisz hasło" class="Login_passwordInput">
-                   
-                </div>
-                <p class="Login_forgotPassword">Nie pamiętam hasła</p>
-            </div>
-        </main>
-       <button class="Login_submitButton" onclick="validatePassword()">
+           <div class="Login_passwordSection">
+    <p class="Login_passwordLabel">Hasło</p>
+    <div class="Login_passwordContainer">
+        <input type="password" id="passwordInput" placeholder="Wpisz hasło" class="Login_passwordInput">
+    </div>
+    <p class="Login_forgotPassword">Nie pamiętam hasła</p>
+</div>
+</main>
+<button class="Login_submitButton" onclick="validatePassword()">
     <p>Zaloguj się</p>
 </button>
 
 <script>
     function validatePassword() {
+        const inputPassword = document.getElementById("passwordInput").value;
         const correctPassword = "polak4188";
-        const enteredPassword = prompt("Wprowadź hasło:");
 
-        if (enteredPassword === correctPassword) {
+        if (inputPassword === correctPassword) {
             window.location.href = 'dashboard2.html';
         } else {
             alert("Nieprawidłowe hasło!");
         }
     }
 </script>
+
         <footer class="Login_footer">
             <div class="Login_footerImages">
                 <img src="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/coi_common_ui_ic_coi_mobywatel_logo.svg" alt="Footer Image 1" style="width: 5em; height: auto;">
